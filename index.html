@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cole Winters Music | Official Site</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">COLE WINTERS</div>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#store">Store</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button id="open-cart-btn" class="cart-nav-btn" onclick="openCart()">
+                        🛒 Cart (<span id="cart-count">0</span>)
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="Cole Winters - Guitar.png" alt="Cole Winters playing guitar" class="hero-image">
+            <h1 class="main-title">COLE WINTERS</h1>
+            <p class="subtitle">Nashville Artist & Producer</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Cole</h2>
+            <img src="Cole Winters Heaven.jpg" alt="Cole Winters" class="page-image">
+            <p class="about-text">
+                Nashville-based artist and producer bringing a fresh perspective to modern music. 
+                From the studio to the stage, Cole Winters captures the heart of storytelling.
+            </p>
+        </div>
+    </section>
+
+    <section id="store">
+        <div class="container">
+            <h2>Official Merchandise</h2>
+            <div class="product-grid">
+                
+                <div class="product">
+                    <div class="product-img-container">
+                        <img src="Cole Winters Trucker hat example.png" alt="CWM Trucker Hat">
+                    </div>
+                    <h3>CWM Trucker Cap</h3>
+                    <p class="price">$18.00</p>
+                    <button class="add-to-cart" 
+                            data-id="hat-001" 
+                            data-name="CWM Trucker Cap" 
+                            data-price="18.00">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <div class="product-img-container">
+                        <img src="vinyl-placeholder.jpg" alt="Family I Let Down Vinyl">
+                    </div>
+                    <h3>"Family I Let Down" Vinyl</h3>
+                    <p class="price">$25.00</p>
+                    <button class="add-to-cart" 
+                            data-id="vinyl-001" 
+                            data-name="Family Vinyl" 
+                            data-price="25.00">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <div class="product-img-container">
+                        <img src="shirt-placeholder.jpg" alt="CWM Sessions Tee">
+                    </div>
+                    <h3>CWM Sessions T-Shirt</h3>
+                    <p class="price">$22.00</p>
+                    <button class="add-to-cart" 
+                            data-id="shirt-001" 
+                            data-name="CWM Sessions Tee" 
+                            data-price="22.00">Add to Cart</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-hero">
+        <div class="contact-overlay-box">
+            <h2>Get In Touch</h2>
+            <form action="https://formspree.io/f/mbdjzlon" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="How can we help?" rows="5" required></textarea>
+                <input type="text" name="_gotcha" style="display:none">
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="cart-overlay" class="cart-overlay" onclick="closeCart()"></div>
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-btn" onclick="closeCart()">&times;</button>
+        </div>
+        
+        <div id="cart-items" class="cart-items-container">
+            </div>
+
+        <div class="cart-footer">
+            <div id="cart-total">
+                </div>
+            <button class="checkout-btn" onclick="window.location.href='YOUR_STRIPE_LINK_HERE'">
+                Secure Checkout
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Cole Winters Music. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
